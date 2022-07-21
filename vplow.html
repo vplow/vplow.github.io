@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://www.cs.cmu.edu/~shuk/vplow.html -->
+<html crosspilot=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+ 
+  <meta name="keywords" content="open-world vision, open-set recognition, long-tail, continual learning, lifelong learning, deep learning, computer vision, few-shot learning, zero-shot learning, active learning, transfer learning, catastrophic forgetting, self-supervised learning, weakly supervised learning, uncertainty, interpretability, anomaly detection, robustness, generalization, large-scale testing, simulation testing, evaluation metrics, train-test domain gap, streaming data, few-shot annotation, synthetic data, data bias, diverse annotations, multi-modality, AI safety, autonomous driving, medical image, auto diagnosis, real-world applications, inter-disciplinary research, carnegie mellon, machine learning">
+
+ <link rel="shortcut icon" href="vplow_files/logo.png">
+
+<style>
+#sidebar { margin-left : 25px; border : 0 solid black; float : right; margin-bottom : 0;}
+</style>
+
+
+  <title>Visual Perception and Learning in an Open World</title>
+  <meta name="description" content="computer vision in the real open world">
+
+  <!--Open Graph Related Stuff-->
+  <meta property="og:title" content="Visual Perception and Learning in an Open World">
+  <meta property="og:url" content="vplow.html">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="vplow_files/logo.png">
+
+  <!--
+  <meta property="og:description" content="computer vision in the real open world" />
+  <meta property="og:site_name" content="Open World Vision">
+  <meta property="og:image:url" content="vplow_files/logo.png"/>
+  -->
+
+  <!--Twitter Card Stuff-->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@aimerykong">
+  <meta name="twitter:title" content="Visual Perception and Learning in an Open World">
+  <meta name="twitter:image" content="http://vplow.github.io/vplow_files/logo.png">
+  <meta name="twitter:description" content="computer vision in the real open world">
+  <meta name="twitter:url" content="http://vplow.github.io/vplow.html">
+
+
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./vplow_files/bootstrap.min.css">
+  <link rel="stylesheet" href="./vplow_files/bootstrap-theme.min.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="./vplow_files/style.css" media="screen,projection">
+</head>
+
+  <body>
+
+    <!-- <div class="top-strip"></div> -->
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://vplow.github.io/vplow.html">VPLOW</a>
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li>
+
+            <!--  TODO: change logo  -->
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="http://vplow.github.io/vplow.html#overview">Overview</a>
+        </li>
+        <li>
+          <a href="http://vplow.github.io/vplow.html#schedule">Schedule</a>
+        </li>
+        <li>
+          <a href="http://vplow.github.io/vplow.html#dates">Dates</a>
+        </li>
+        <li>
+          <a href="http://vplow.github.io/vplow.html#speakers">Speakers</a>
+        </li>
+        <li>
+          <a href="http://vplow.github.io/vplow.html#competition">Competition</a>
+        </li>
+        <li>
+          <a href="http://vplow.github.io/vplow.html#organizers">Organizers</a>
+        </li>
+
+        <li>
+          <a href="http://vplow.github.io/vplow.html#sponsors">Sponsors</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="page-content">
+
+
+
+    <div class="row">
+      <div class="col-xs-12">
+      <div id="sidebar"><img src="./vplow_files/logo.png" width="100"></div>
+        <h1><b>Visual Perception and Learning in an Open World</b> <div class="instructorphoto"></div></h1>
+        <h3><b>The 2nd workshop on Open World Vision</b> <div class="instructorphoto"></div></h3>
+        <h4>June 19, held in conjunction with <a href="http://cvpr2022.thecvf.com/" target="_blank">CVPR 2022</a>, New Orleans, Louisiana</h4>
+	<br>
+	<h3>hybrid workshop</h3>
+	<h4><font color="blue">place: 206-207, New Orleans Ernest N. Morial Convention Center</font></h4>
+	<h4><font color="red">NOTE: we will <em><strong>not</strong></em> use the zoom link provided by CVPR; we livestream the workshop on YouTube: </font><a href="https://youtu.be/q4ypT-33puU" target="_blank">https://youtu.be/q4ypT-33puU</a></h4>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Overview -->
+    <p><a class="anchor" id="overview"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Overview</h2>
+        <p>
+Visual perception is indispensable for numerous applications, spanning transportation, healthcare, security, commerce, entertainment, and interdisciplinary research. Currently, visual perception algorithms are often developed in a closed-world paradigm, which assumes the data distribution and categorical labels are fixed a priori.
+This is unrealistic in the real open world, which contains situations that are dynamic, vast, and unpredictable. 
+Algorithms developed in a closed world appear brittle once exposed to the complexity of the open world, where they are unable to properly adapt or robustly generalize to new scenarios.
+We are motivated to invite researchers to the workshop on Visual Perception and Learning in an Open World (VPLOW) where we have multiple speakers and three challenge competitions to cover a variety of topics. We hope our workshop stimulates fruitful discussions on the open-world research.
+	<br>
+	<br>
+	You might be interested in our previous workshops:
+	</p><ul>
+          <li>
+	<a href="http://vplow.github.io/open-world-vision.html">Open World Vision (OWV) at CVPR2021</a>
+	  </li>
+	  <li>
+	<a href="https://www.cs.umd.edu/~pulkit/DNOW_workshop/">Dealing with Novelty in Open Worlds (DNOW) at WACV2022</a>
+	  </li>
+	</ul>
+        <p></p>
+      </div>
+    </div>
+
+    <hr>
+    <!-- topics -->
+    <p><a class="anchor" id="topics"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Topics</h2>
+        <p>
+	Topics of interest include, but are not limited to:
+        </p>
+        <ul>
+          <li><b>Open-world data</b>: long-tailed distribution, open-set, unknowns, streaming data, biased data, unlabeled data, anomaly, multi-modality, etc.</li>
+          <li><b>Learning/problems</b>: X-shot learning, Y-supervised learning, lifelong/continual learning, domain adaptation/generalization, open-world learning, etc.</li>
+          <li><b>Social Impact</b>: safety, fairness, real-world applications, inter-disciplinary research, etc.</li>
+	  <li><b>Misc</b>:  datasets, benchmarks, interpretability, robustness, generalization, etc.</li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <hr>
+    <!-- examples -->
+    <p><a class="anchor" id="examples"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Examples</h2>
+        <p>Let's consider the following motivational examples.
+        </p>
+        <ul>
+          <li><b>Open-world data follows a long-tail distribution</b>.
+		  Data tends to follow a long-tailed distribution and real-world tasks often emphasize the rarely-seen data.
+		  A model trained on such long-tailed data can perform poorly on rare or underrepresentative data. 
+		  For example, a visual recognition model can misclassify underrepresented minorities and make unethical predictions 
+		  (ref. <a href="https://www.wired.com/story/when-it-comes-to-gorillas-google-photos-remains-blind" target="_blank">case1</a>, 
+		  <a href="https://www.nytimes.com/2021/09/03/technology/facebook-ai-race-primates.html" target="_blank">case2</a>).
+	  </li>
+          <li><b>Open-world contains unknown examples</b>.
+		  Largely due to the long-tail nature of data distribution, 
+		  visual perception models are invariably confronted by unknown examples in the open world. 
+		  Failing to detecting the unknowns can cause serious issues. 
+		  For example, a Tesla Model 3 did not identify an unknown overturned truck and crashed into the truck (ref. <a href="https://www.forbes.com/sites/bradtempleton/2020/06/02/tesla-in-taiwan-crashes-directly-into-overturned-truck-ignores-pedestrian-with-autopilot-on/?sh=4ce50aec58e5" target="_blank">case</a>).
+	  </li>
+          <li><b>Open-world requires learning with evolving data, and labels</b>.
+		  The world of interest is changing over time, e.g., driving scenes (in different cities and under different weather), the search engine ("apple" means different things today and 20 years ago). This says that the data distribution and semantics are continually changing and evolving. How to address distribution shifts and concept drifts?
+	  </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+    <hr>
+    <!-- Speakers-->
+    <p><a class="anchor" id="speakers"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Speakers</h2>
+    <br>
+          <!--div class="instructor">
+            <a href="http://www.cs.cmu.edu/~shuk/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/shu.jpg"></div>
+              <div>Shu Kong</div>
+            </a>
+	    <div class="instructor-institute">Carnegie Mellon University</div><br>
+          </div-->
+
+          <!--div class="instructor">
+            <a href="https://research.google/people/RahulSukthankar/" target="_blank">
+		    <div class="instructorphoto"><img src="./vplow_files/Rahul_Sukthankar.png"></div>
+              <div>Rahul Sukthankar</div>
+            </a>
+	    <div class="instructor-institute">Google</div><br>
+          </div-->
+	  <div class="instructor">
+            <a href="http://web.engr.oregonstate.edu/~tgd/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/thomasD.jfif"></div>
+              <div>Thomas G. Dietterich</div>
+            </a>
+            <div class="instructor-institute">Oregon State University</div><br>
+          </div>
+
+          <div class="instructor">
+            <a href="https://www.cs.utexas.edu/users/grauman/" target="_blank">
+		    <div class="instructorphoto"><img src="./vplow_files/grauman.jpg"></div>
+		    <div>Kristen Grauman</div>
+            </a>
+	    <div class="instructor-institute">University of Texas at Austin</div><br>
+          </div>
+          <div class="instructor">
+            <a href="https://www.cc.gatech.edu/~judy" target="_blank">
+		    <div class="instructorphoto"><img src="./vplow_files/JudyHoffman2021.jpeg"></div>
+		    <div>Judy Hoffman</div>
+            </a>
+	    <div class="instructor-institute">Georgia Tech</div><br>
+          </div>
+
+          <div class="instructor">
+            <a href="https://www.cs.cmu.edu/~dpathak" target="_blank">
+		    <div class="instructorphoto"><img src="./vplow_files/Deepak_Pathak.jpg"></div>
+	      <div>Deepak Pathak</div>
+            </a>
+	    <div class="instructor-institute">Carnegie Mellon University</div><br>
+          </div>
+
+          <div class="instructor">
+            <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/" target="_blank">
+		    <div class="instructorphoto"><img src="./vplow_files/poggio.jpg"></div>
+		    <div>Tomaso Poggio</div>
+            </a>
+	    <div class="instructor-institute">MIT</div><br>
+          </div>
+
+          <div class="instructor">
+            <a href="https://www.wjscheirer.com/" target="_blank">
+		    <div class="instructorphoto"><img src="./vplow_files/wjscheirer.jpg"></div>
+		    <div>Walter J. Scheirer</div>
+            </a>
+	    <div class="instructor-institute">University of Notre Dame</div><br>
+          </div>
+
+          <div class="instructor">
+            <a href="https://homes.esat.kuleuven.be/~tuytelaa" target="_blank">
+		    <div class="instructorphoto"><img src="./vplow_files/tinne.jpg"></div>
+		    <div>Tinne Tuytelaars</div>
+            </a>
+	    <div class="instructor-institute">K.U. Leuven</div><br>
+          </div>
+
+
+	  <div class="instructor">
+            <a href="http://www.cs.columbia.edu/~vondrick/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/photo-me.jpg"></div>
+              <div>Carl Vondrick</div>
+            </a>
+            <div class="instructor-institute">Columbia University</div><br>
+          </div>
+
+          <!-- able to present but prefer giving opportunities to others -->
+          <!-- div class="instructor">
+            <a href="http://andrewowens.com/" target="_blank">
+              <div class="instructorphoto"><img src="http://vision.eecs.umich.edu/images/faculty/Andrew_Owens.jpg"></div>
+              <div>Andrew Owens</div>
+            </a>
+            <div class="instructor-institute">UMich</div>
+          </div>
+          <div class="instructor">
+            <a href="http://www.cs.cmu.edu/~deva/" target="_blank">
+              <div class="instructorphoto"><img src="./open-world-vision_files/deva.jpg"></div>
+              <div>Deva Ramanan</div>
+            </a>
+            <div class="instructor-institute">CMU</div>
+          </div>
+          <div class="instructor">
+            <a href="http://www.cs.umd.edu/~abhinav/" target="_blank">
+              <div class="instructorphoto"><img src="http://www.cs.umd.edu/~abhinav/images/profileImage_compressed.jpg"></div>
+              <div>Abhinav Shrivastava</div>
+            </a>
+            <div class="instructor-institute">UMD</div>
+          </div-->
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Organizers -->
+    <br><hr>
+    <p><a class="anchor" id="organizers"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Organizers</h2>
+    <p class="important">Please contact Shu Kong with any questions: aimerykong [at] gmail [dot] com</p>
+    <br>
+        <div>
+          <div class="instructor">
+            <a href="http://www.cs.cmu.edu/~shuk/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/shu.jpg"></div>
+              <div>Shu Kong</div>
+            </a>
+	    <div class="instructor-institute">Carnegie Mellon University</div><br>
+          </div>
+          <div class="instructor">
+            <a href="https://yxw.web.illinois.edu/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/yuxiong.png"></div>
+              <div>Yu-Xiong Wang</div>
+            </a>
+            <div class="instructor-institute">University of Illinois at Urbana-Champaign</div>
+          </div>
+          <div class="instructor">
+            <a href="http://andrewowens.com/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/Andrew_Owens.jpg"></div>
+              <div>Andrew Owens</div>
+            </a>
+            <div class="instructor-institute">University of Michigan</div><br>
+          </div>
+          <!--div class="instructor">
+            <a href="https://www.cs.cmu.edu/~dpathak" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/Deepak_Pathak.jpg"></div>
+	      <div>Deepak Pathak</div>
+            </a>
+	    <div class="instructor-institute">Carnegie Mellon University</div><br>
+          </div-->
+          <!--br-->
+          <div class="instructor">
+            <a href="http://www.cs.columbia.edu/~vondrick/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/photo-me.jpg"></div>
+              <div>Carl Vondrick</div>
+            </a>
+            <div class="instructor-institute">Columbia University</div><br>
+          </div>
+          <div class="instructor">
+            <a href="http://www.cs.umd.edu/~abhinav/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/profileImage_compressed.jpg"></div>
+              <div>Abhinav Shrivastava</div>
+            </a>
+	    <div class="instructor-institute">University of Maryland</div><br>
+          </div>
+          <div class="instructor">
+            <a href="http://www.cs.cmu.edu/~deva/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/deva.jpg"></div>
+              <div>Deva Ramanan</div>
+            </a>
+            <div class="instructor-institute">Carnegie Mellon University</div><br>
+          </div>
+          <div class="instructor">
+            <a href="https://www.vast.uccs.edu/~tboult/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/boult_01.jpg"></div>
+              <div>Terrance Boult</div>
+            </a>
+            <div class="instructor-institute">University of Colorado Colorado Springs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+<p><a class="anchor" id="speakers"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Challenge Organizers</h3>
+    <br>
+          <div class="instructor">
+            <a href="http://tanmaygupta.info/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/tanmay_photo.jpeg"></div>
+              <div>Tanmay Gupta</div>
+            </a>
+            <div class="instructor-institute">Allen Institute for AI (AI2)</div><br>
+          </div>
+          <div class="instructor">
+            <a href="https://dhoiem.cs.illinois.edu/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/derek.jpg"></div>
+              <div>Derek Hoiem</div>
+            </a>
+            <div class="instructor-institute">University of Illinois at Urbana-Champaign</div>
+          </div>
+          <div class="instructor">
+            <a href="https://anikem.github.io/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/ani.jpg"></div>
+              <div>Aniruddha (Ani) Kembhavi</div>
+            </a>
+            <div class="instructor-institute">Allen Institute for AI (AI2)</div><br>
+          </div>
+<div class="instructor">
+            <a href="https://www.linkedin.com/in/amitakamath/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/amita.jpg"></div>
+              <div>Amita Kamath</div>
+            </a>
+            <div class="instructor-institute">Allen Institute for AI (AI2)</div><br>
+          </div>
+          <div class="instructor">
+            <a href="https://www.linkedin.com/in/yuqun-wu-98b8761a2/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/yuqunWu.jpg"></div>
+              <div>Yuqun Wu</div>
+            </a>
+            <div class="instructor-institute">University of Illinois at Urbana-Champaign</div>
+          </div>
+
+          <div class="instructor">
+            <a href="https://www.linkedin.com/in/ryan-marten/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/RyanMarten.jpg"></div>
+              <div>Ryan Marten</div>
+            </a>
+            <div class="instructor-institute">University of Illinois at Urbana-Champaign</div>
+          </div>
+
+
+          <div class="instructor">
+            <a href="https://linzhiqiu.github.io/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/zhiqiu.jpg"></div>
+              <div>Zhiqiu Lin</div>
+            </a>
+            <div class="instructor-institute">Carnegie Mellon University</div><br>
+          </div>
+
+          <div class="instructor">
+            <a href="https://www.linkedin.com/in/elvishelvisshi/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/Shi-Jia.png"></div>
+              <div>Jia Shi</div>
+            </a>
+            <div class="instructor-institute">Carnegie Mellon University</div><br>
+          </div>
+
+          <div class="instructor">
+            <a href="https://www.cs.umd.edu/~pulkit/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/pulkit.png"></div>
+              <div>Pulkit Kumar</div>
+            </a>
+            <div class="instructor-institute">University of Maryland</div><br>
+          </div>
+          <div class="instructor">
+            <a href="https://www.linkedin.com/in/anubhav-5209729/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/Anubhav.jpg"></div>
+              <div>Anubav</div>
+            </a>
+            <div class="instructor-institute">University of Maryland</div><br>
+          </div>
+	  <div class="instructor">
+            <a href="https://rssaketh.github.io/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/Saketh1_circle.png"></div>
+              <div>Saketh Rambhatla</div>
+            </a>
+            <div class="instructor-institute">University of Maryland</div><br>
+          </div>
+
+
+
+          <div class="instructor">
+            <a href="https://www.linkedin.com/in/kelvinsh/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/Shihao_Shen.jpeg"></div>
+              <div>Shihao Shen</div>
+            </a>
+            <div class="instructor-institute">Carnegie Mellon University</div><br>
+          </div>
+          <div class="instructor">
+            <a href="https://www.linkedin.com/in/siqi-zeng-91b067175/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/Siqi_Zeng.jpg"></div>
+              <div>Siqi Zeng</div>
+            </a>
+            <div class="instructor-institute">Carnegie Mellon University</div><br>
+          </div>
+
+	</div>
+      </div>
+    <br>
+
+
+
+<p><a class="anchor" id="speakers"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Onsite Coordinators</h3>
+    <br>
+          <div class="instructor">
+            <a href="https://www.linkedin.com/in/salshamm" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/Shaden.png"></div>
+              <div>Shaden Alshammari</div>
+            </a>
+            <div class="instructor-institute">MIT</div><br>
+          </div>
+          <div class="instructor">
+            <a href="https://www.linkedin.com/in/aljazzy" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/Aljazzy_Alahmadi.jpg"></div>
+              <div>Aljazzy Alahmadi</div>
+            </a>
+            <div class="instructor-institute">MIT</div><br>
+          </div>
+          <div class="instructor">
+            <a href="http://www.neeharperi.com/" target="_blank">
+              <div class="instructorphoto"><img src="./vplow_files/neehar-peri.png"></div>
+              <div>Neehar Peri</div>
+            </a>
+            <div class="instructor-institute">CMU</div><br>
+          </div>
+
+
+
+	</div>
+      </div>
+    <br>
+
+
+
+
+
+
+    <br><hr>
+    <!-- Important Dates -->
+    <p><a class="anchor" id="dates"></a></p>
+    <div class="row" style="margin-top:30px;">
+      <div class="col-xs-12 col-sm-12">
+        <h2>Important Dates</h2>
+	<h5> <font color="red">Please go to each challenge's website for details and any updated dates!</font></h5>
+        <ul>
+          <li><b>Submission deadline for Challenge-1: <a href="https://www.aicrowd.com/challenges/cvpr-2022-clear-challenge" target="_blank">CLEAR</a></b>: June 8, 2022 at 11:59pm PST. </li>
+          <li><b>Submission deadline for Challenge-2: <a href="https://grit-benchmark.org/" target="_blank">GRIT</a></b>: June 10, 2022 at 11:59pm PST. </li>
+	  <li><b>Submission deadline for Challenge-3: <a href="https://rssaketh.github.io/project_pages/obj_disc_new.html#workshop_challenge">ObjClsDisc</a></b>: June 15, 2022 at 11:59pm PST. </li>
+          <li><b>Workshop date</b>: June 19, 2022</li>
+        </ul>
+        <p>Oral presentation will be selected from challenge participants, e.g., winners and those having innovative ideas.</p>
+      </div>
+    </div>
+
+
+
+
+    <hr>
+    <!-- Competition -->
+    <p><a class="anchor" id="competition"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Competition</h2>
+        <!--p class="important"-->
+	We organize three challenge competitions this year.
+	<h5> <font color="red">Please refer to the challenges' websites and ask challenge organizers if you have questions.</font></h5>
+        <p></p>
+        <ul>
+          <li>
+            <b><a href="https://www.aicrowd.com/challenges/cvpr-2022-clear-challenge" target="_blank">CLEAR: Continual LEArning on Real-World Imagery</a></b>. 
+		It is the first continual image classification benchmark dataset with a natural temporal evolution of visual concepts in the real world that spans a decade (2004-2014).
+          </li>
+          <li>
+            <b><a href="https://grit-benchmark.org/" target="_blank">GRIT: the General Robust Image Task Benchmark</a></b>. 
+		It evaluates the performance and robustness of a vision system across a variety of image prediction tasks, concepts, and data sources.
+          </li>
+          <li>
+            <b><a href="https://rssaketh.github.io/project_pages/obj_disc_new.html#workshop_challenge" target="_blank">ObjClsDisc: In-the-Wild Object Discovery Challenge</a></b>.
+		It studies a system’s capabilities to discover and group novel object categories in a large unlabeled dataset. 
+          </li>
+        </ul>
+      <p></p></div>
+    </div>
+
+
+
+    <hr>
+
+
+
+
+    <!-- Schedule -->
+    <p><a class="anchor" id="schedule"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Program Schedule</h2>
+      </div>
+    </div>
+    <b><font color="blue">YouTube livestream url: </font><a href="https://youtu.be/q4ypT-33puU" target="_blank">https://youtu.be/q4ypT-33puU</a></b>
+    <div class="row slot-dark">
+      <div class="col-xs-12 col-sm-2">
+        Time (Central Time, UTC-5)
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Event
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        Title/Presenter
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Links
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        08:45 - 09:00
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Opening remarks (virtual)
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <a href="http://www.cs.cmu.edu/~shuk/" target="_blank"><strong>Shu Kong</strong></a>
+	<span style="color:#999999;">CMU</span><br>
+		Visual Perception and Learning in an Open World
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        09:00 - 09:30
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Invited talk #1 (virtual)
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="https://homes.esat.kuleuven.be/~tuytelaa/" target="_blank"><strong>Tinne Tuytelaars</strong></a>
+	      <span style="color:#999999;">K.U. Leuven</span><br>
+		 Some thoughts on continual learning 
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        09:30 - 10:00
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Invited talk #2
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="http://www.cs.columbia.edu/~vondrick/" target="_blank"><strong>Carl Vondrick</strong></a>
+	      <span style="color:#999999;">Columbia University</span><br>
+		Inverting the Neural Networks 
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        10:00 - 10:30
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Invited talk #3
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="https://faculty.cc.gatech.edu/~judy" target="_blank"><strong>Judy Hoffman</strong></a>
+	      <span style="color:#999999;">Georgia Tech</span><br>
+		 The Complexity of Bas in Vision Systems 
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        10:30 - 10:45
+      </div>
+      <div class="col-xs-12 col-sm-2">
+               Break / time buffer
+      </div>
+      <div class="col-xs-12 col-sm-6">
+      <img src="./vplow_files/np_coffee.png" width="50">
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        10:45 - 11:15
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Invited talk #4 (virtual)
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/" target="_blank"><strong>Tomaso Poggio</strong></a>
+	      <span style="color:#999999;">MIT</span><br>
+		Thoughts on Real World Learning Theory
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+
+<div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+          11:15 - 11:35
+      </div>
+      <div class="col-xs-12 col-sm-2">
+	      Host remark of Challenge-1 <a href="https://grit-benchmark.org/">CLEAR</a>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="https://linzhiqiu.github.io/" target="_blank"><strong>Zhiqiu Lin</strong></a>
+	      <span style="color:#999999;">CMU</span><br>
+	      CLEAR: Challenge of Continual Learning on Real-World Imagery<br>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+<div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+          11:35 - 11:42
+      </div>
+      <div class="col-xs-12 col-sm-2">
+              CLEAR Presentation #1
+      </div>
+      <div class="col-xs-12 col-sm-6">
+              <strong>Ge Liu</strong>
+              <span style="color:#999999;">SJTU</span><br>
+                Improving Model Generalization by Contrasting Features across Domains
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+<div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+          11:42 - 11:49
+      </div>
+      <div class="col-xs-12 col-sm-2">
+              CLEAR Presentation #2
+      </div>
+      <div class="col-xs-12 col-sm-6">
+              <strong>Xiaojun Tang, Pan Zhong, Tingting Wang, Yuzhou Peng</strong>
+              <span style="color:#999999;">BOE Technology Group</span><br>
+               Adaptive Loss for Better Model Generalization in Real World
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+<div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+          11:49 - 11:57
+      </div>
+      <div class="col-xs-12 col-sm-2">
+              CLEAR Presentation #3
+      </div>
+      <div class="col-xs-12 col-sm-6">
+              <strong>Jiawei Dong, Mengwen Du, Shuo Wang</strong>
+              <span style="color:#999999;">AI Prime</span><br>
+                Comprehensive Studies on Sampling, Architecture and Augmentation Strategies
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+
+<div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+          11:57 - 12:05
+      </div>
+      <div class="col-xs-12 col-sm-2">
+              CLEAR Presentation #4
+      </div>
+      <div class="col-xs-12 col-sm-6">
+              <strong>Xinkai Gao, Bo Ke, Sunan He, Ruizhi Qiao</strong>
+              <span style="color:#999999;">Tencent, YouTu Lab</span><br>
+                Bucket-Aware Sampling Strategy for Efficient Replay
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+
+
+<!--div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+          11:15 - 11:35
+      </div>
+      <div class="col-xs-12 col-sm-2">
+	      Challenge host's remark of <a href="https://www.aicrowd.com/challenges/cvpr-2022-clear-challenge" target="_blank">CLEAR</a>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="https://www.aicrowd.com/challenges/cvpr-2022-clear-challenge" target="_blank"><strong>CLEAR</strong></a>
+		<strong> title tbd </strong>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+          11:35 - 12:05
+      </div>
+      <div class="col-xs-12 col-sm-2">
+	invited teams for CLEAR
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="./" target="_blank"><strong>CLEAR-invited#1</strong></a>
+	      <span style="color:#999999;">institute</span><br>
+	      <a href="./" target="_blank"><strong>CLEAR-invited#2</strong></a>
+	      <span style="color:#999999;">institute</span><br>
+	      <a href="./" target="_blank"><strong>CLEAR-invited#3</strong></a>
+	      <span style="color:#999999;">institute</span><br>
+	      <a href="./" target="_blank"><strong>CLEAR-invited#4</strong></a>
+	      <span style="color:#999999;">institute</span><br>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div-->
+
+
+
+
+
+
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        12:05 - 13:15
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Lunch break
+      </div>
+      <div class="col-xs-12 col-sm-6">
+      <img src="./vplow_files/lunch-break.webp" width="50">
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        13:15 - 13:45
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Invited talk #7 (virtual)
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="http://web.engr.oregonstate.edu/~tgd/" target="_blank"><strong>Thomas Dietterich</strong></a>
+	      <span style="color:#999999;">Oregon State University</span><br>
+		Further Studies of the Familiarity Hypothesis for Deep Novelty Detection
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+          13:45 - 14:15
+      </div>
+      <div class="col-xs-12 col-sm-2">
+          Invited talk #8
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="https://www.cs.utexas.edu/users/grauman/" target="_blank"><strong>Kristen Grauman</strong></a>,
+	      <span style="color:#999999;">University of Texas at Austin</span><br>
+		 From naming to using: agents in the open world 
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        14:15 - 14:45
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Invited talk #5
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="https://www.wjscheirer.com/" target="_blank"><strong>Walter J. Scheirer</strong></a>
+	      <span style="color:#999999;">University of Notre Dame</span><br>
+		 A Unifying Framework for Formal Theories of Novelty in Visual Perception
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+
+
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        14:45 - 15:15
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Invited talk #6
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="https://www.cs.cmu.edu/~dpathak" target="_blank"><strong>Deepak Pathak</strong></a>
+	      <span style="color:#999999;">CMU</span><br>
+	      Open-World Vision for Robot Learning in the Wild
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+
+
+
+
+    
+
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        15:15 - 15:30
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Break / time buffer
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	<img src="./vplow_files/np_coffee.png" width="50">
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+          15:30 - 15:35
+      </div>
+      <div class="col-xs-12 col-sm-2">
+	      Host remark of Challenge-2 <a href="https://grit-benchmark.org/">GRIT</a>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="https://dhoiem.cs.illinois.edu/" target="_blank"><strong>Derek Hoiem</strong></a>
+	      <span style="color:#999999;">UIUC</span><br>
+	      Overview of GPV and GRIT<br>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+<div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+          15:35 - 15:55
+      </div>
+      <div class="col-xs-12 col-sm-2">
+              Host remark of Challenge-2 <a href="https://grit-benchmark.org/">GRIT</a>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+              <a href="http://tanmaygupta.info/" target="_blank"><strong>Tanmay Gupta</strong></a>,
+              <a href="https://www.linkedin.com/in/ryan-marten" target="_blank"><strong>Ryan Marten</strong></a>
+              <span style="color:#999999;">AI2, UIUC</span><br>
+                The GRIT Benchmark
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+<div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+          15:55 - 16:00
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        GRIT presentation
+      </div>
+      <div class="col-xs-12 col-sm-6">
+              <a href="https://cs.stanford.edu/~kamatha/" target="_blank"><strong>Amita Kamath</strong></a>
+              <span style="color:#999999;">Stanford, AI2</span><br>
+GPV 1
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+<div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+          16:00 - 16:10
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        GRIT presentation
+      </div>
+      <div class="col-xs-12 col-sm-6">
+              <a href="https://www.linkedin.com/in/christopher-clark-349b111a9/" target="_blank"><strong>Chris Clark</strong></a>
+              <span style="color:#999999;">UW, AI2</span><br>
+GPV 2
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+          16:10 - 16:20
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        GRIT presentation
+      </div>
+      <div class="col-xs-12 col-sm-6">
+              <a href="https://www.linkedin.com/in/jiasen-lu-212a8145/" target="_blank"><strong>Jiasen Lu</strong></a>
+              <span style="color:#999999;">AI2</span><br>
+Unified-IO
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+          16:20 - 16:40
+      </div>
+      <div class="col-xs-12 col-sm-2">
+	      Host remark of Challenge-3 <a href="https://rssaketh.github.io/project_pages/obj_disc_new.html#workshop_challenge" target="_blank">ObjClsDisc</a>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="https://www.cs.umd.edu/~abhinav" target="_blank"><strong>Abhinav Shrivastava</strong></a>,
+		<span style="color:#999999;">UMD</span><br>	
+		Reviving Object Discovery: Where from &amp; Where to? A teaser challenge on Object Class Discovery
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+          16:40 - 17:10
+      </div>
+      <div class="col-xs-12 col-sm-2">
+	invited teams for ObjClsDisc
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <strong>Yuhong Yang</strong>
+	      <span style="color:#999999;">Tsinghua University &amp; OPPO Research Institute</span><br>
+	      Team MIG <br><br>
+	      <strong>Yiqi Zou</strong>
+	      <span style="color:#999999;">Sun Yat-sen University</span><br>
+	      Team Amadeus<br><br>
+	      <strong>Archana Swaminathan</strong>
+	      <span style="color:#999999;">UMD</span><br>
+	      Team UMD
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        17:10 - 17:15
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Closing remarks
+      </div>
+      <div class="col-xs-12 col-sm-6">
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <hr><br>
+    <!-- Sponsors -->
+    <div class="row">
+    <h2>Sponsors</h2>
+    <a class="anchor" id="sponsors"></a>
+	<a href="https://www.argo.ai/" target="_blank"><img src="./vplow_files/ARGO-Logo-Master-PMS-01.svg" width="150"></a>
+        <a href="https://www.cmu.edu/" target="_blank"><img src="./vplow_files/CMU-riLogo2019.svg" width="250"></a>
+        <a href="https://allenai.org/" target="_blank"><img src="./vplow_files/ai2-logo-wide.png" width="300"></a>
+        <a href="https://illinois.edu/" target="_blank"><img src="./vplow_files/uiuc-logo.png" width="200"></a>
+        <a href="https://www.umd.edu/" target="_blank"><img src="./vplow_files/umd-logo.gif" width="200"></a>
+        <a href="https://www.umiacs.umd.edu/" target="_blank"><img src="./vplow_files/Umiacs-logo.png" width="200"></a>
+        <a href="https://www.darpa.mil/" target="_blank"><img src="./vplow_files/DARPA_logo_with_text.png" width="250"></a>
+	<a href="https://www.columbia.edu/" target="_blank"><img src="./vplow_files/columbia-university-logo.png" width="160"></a><br><br>
+        <a href="https://engineering.tamu.edu/cse/index.html" target="_blank"><img src="./vplow_files/tamu_CSCE_logo_HMaroon.png" width="350"></a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<!-- Footer -->
+<p>
+<br>
+<br>
+</p><div>
+<footer id="footer">
+<!-- <p class="copyright">&copy; Shu Kong -- Logo photo is created by Shu Kong. -->
+<p class="copyright"><font size="-1"> Website design adapted from <a href="http://ai.stanford.edu/~jingweij/cicv/">Compositionality in Computer Vision</a>.
+Logo photo is created by Shu Kong by composing two Flickr images.
+</font> </p>
+</footer>
+</div>
+
+
+<!-- jQuery and Boostrap -->
+<script src="./vplow_files/jquery.min.js.download"></script>
+<script src="./vplow_files/bootstrap.min.js.download"></script>
+
+
+ 
+
+<iframe src="./vplow_files/saved_resource.html" style="display: none;"></iframe>
+</body></html>
