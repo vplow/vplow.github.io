@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://www.cs.cmu.edu/~shuk/open-world-vision.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta name="keywords" content="open-world vision, open-set recognition, long-tail, continual learning, lifelong learning, deep learning, computer vision, few-shot learning, zero-shot learning, active learning, transfer learning, catastrophic forgetting, self-supervised learning, weakly supervised learning, uncertainty, interpretability, anomaly detection, robustness, generalization, large-scale testing, simulation testing, evaluation metrics, train-test domain gap, streaming data, few-shot annotation, synthetic data, data bias, diverse annotations, multi-modality, AI safety, autonomous driving, medical image, auto diagnosis, real-world applications, inter-disciplinary research, carnegie mellon, machine learning">
+
+ <link rel="shortcut icon" href="./open-world-vision_files/logo.png">
+
+<style>
+#sidebar { margin-left : 25px; border : 0 solid black; float : right; margin-bottom : 0;}
+</style>
+
+
+  <title>Open World Vision</title>
+  <meta name="description" content="computer vision in the real open world">
+
+  <!--Open Graph Related Stuff-->
+  <meta property="og:title" content="Open World Vision">
+  <meta property="og:url" content="https://vplow.github.io/open-world-vision.html"/>
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://vplow.github.io/open-world-vision_files/logo.png"/>
+
+  <!--
+  <meta property="og:description" content="computer vision in the real open world" />
+  <meta property="og:site_name" content="Open World Vision">
+  <meta property="og:image:url" content="https://vplow.github.io/open-world-vision_files/logo.png"/>
+  -->
+
+  <!--Twitter Card Stuff-->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@aimerykong">
+  <meta name="twitter:title" content="Open World Vision">
+  <meta name="twitter:image" content="https://vplow.github.io/open-world-vision_files/logo.png">
+  <meta name="twitter:description" content="computer vision in the real open world">
+  <meta name="twitter:url" content="https://vplow.github.io/open-world-vision.html">
+
+
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./open-world-vision_files/bootstrap.min.css">
+  <link rel="stylesheet" href="./open-world-vision_files/bootstrap-theme.min.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="./open-world-vision_files/style.css" media="screen,projection">
+</head>
+
+  <body>
+
+    <!-- <div class="top-strip"></div> -->
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://vplow.github.io/open-world-vision.html">Open World Vision</a>
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li>
+
+            <!--  TODO: change logo  -->
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="./open-world-vision.html#overview">Overview</a>
+        </li>
+        <li>
+          <a href="./open-world-vision.html#schedule">Schedule</a>
+        </li>
+        <li>
+          <a href="./open-world-vision.html#dates">Dates</a>
+        </li>
+        <li>
+          <a href="./open-world-vision.html#speakers">Speakers</a>
+        </li>
+        <li>
+          <a href="./open-world-vision.html#competition">Competition</a>
+        </li>
+        <!--li>
+          <a href="./open-world-vision.html#submission">Submission</a>
+        </li-->
+        <li>
+          <a href="./open-world-vision.html#organizers">Organizers</a>
+        </li>
+<!--        <li>-->
+<!--          <a href="#accepted">Accepted papers</a>-->
+<!--        </li>-->
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="page-content">
+
+
+
+    <div class="row">
+      <div class="col-xs-12">
+      <div id="sidebar"><img src="./open-world-vision_files/logo.png" width="100"></div>
+        <h1><b>Open World Vision</b> <div class="instructorphoto"></h1>
+        <h3>June 20th, held in conjunction with <a href="http://cvpr2021.thecvf.com/" target="_blank">CVPR 2021</a></h3>
+	<br>
+	<h3> <font color="red">Recorded Video is available on YouTube! Thank you all!</font></h3>
+	<h3><a href="https://youtu.be/TknWpbXEKeA?t=3355" target="_blank">https://youtu.be/TknWpbXEKeA</a></h3>
+	<h3> <font color="red"><a href="https://eval.ai/web/challenges/challenge-page/1041/overview">EvalAI challenge interface</a> is re-opened for interested researchers to test algorithms.</font></h3>
+
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Overview -->
+    <p><a class="anchor" id="overview"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Overview</h2>
+        <p>
+	Computer vision algorithms are often developed inside a closed-world paradigm, for example recognizing objects from a fixed set of categories. However, our visual world is naturally open, containing situations that are dynamic, vast, and unpredictable. Algorithms developed on closed-world datasets are often brittle once exposed to the realistic complexity of the open world, where they are unable to efficiently adapt and robustly generalize. We invite researchers in perception and learning to the Workshop on Open World Vision where we will investigate, along several directions, both the challenges and opportunities for open world vision systems.
+	
+        </p>
+      </div>
+    </div>
+
+    <hr>
+    <!-- topics -->
+    <p><a class="anchor" id="topics"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Topics</h2>
+        <p>This workshop@CVPR2021  aims to bring together vision researchers and practitioners from both academia and industry interested in addressing open-world vision problems. The domains include but are not limited to learning and deploying vision algorithms in the open world, security and safety of embodied vision, realistic setups and datasets, etc.
+        </p>
+        <ul>
+          <li><b>Real open world data</b>: long-tail distribution, streaming data, data bias, anomalous inputs, multi-modality, etc.</li>
+          <li><b>Learning/problems</b>: X-shot learning, Y-supervised learning, lifelong/continual learning, meta-learning, domain adaptation/generalization, open-set recognition, etc.</li>
+          <li><b>Social Impact</b>: safety, fairness, real-world applications, inter-disciplinary research, etc.</li>
+	  <li><b>Misc</b>:  datasets, benchmark, uncertainty, interpretability, robustness, generalization, etc.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- examples -->
+    <p><a class="anchor" id="examples"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Examples</h2>
+        <p>Let's consider the following motivational examples.
+        </p>
+        <ul>
+          <li><b>Open-world data follows long-tail distribution</b>.
+          When should we treat heavily-tailed classes and dominant classes equally or differently? In autonomous driving, we simply group "dogs" and "racoons" into an "animal" super-class because animal types do not necessarily change motion plans for obstacle avoidance (e.g., "stop" or "slow-down"). In contrast, an elderly-assistive robot may have to recognize rarely-seen kitchenware (e.g., water cups and coffee mugs).
+	  </li>
+          <li><b>Open-world contains unknown examples</b>.
+		   Because of the nature of long-tail distributions, one typically constructs a closed-world training set by first defining an ontology (e.g., the vocabulary of semantic labels) w.r.t dominant/common classes, and then ignoring the "tail" uncommon/rare classes, many of which may not even be seen during data collection. Examples from these tail classes are unknown open-set data to a model trained on that closed-world dataset. An autonomous vehicle may not recognize a rarely-seen stroller, a recommendation system may be confronted with fake imagery that is adversarially generated. How should a model trained in the closed-world dataset respond to open-set unknown examples?
+	  </li>
+          <li><b>Open-world requires our limited ontology of labels to be evolving</b>.
+		  We take the view that ontologies (e.g., object vocabulary for driving safety and clothing styles vocabulary) evolve over time. For example, after deploying an autonomous driving system, we would like to differentiate "police-officers" and "pedestrians" (both of which are "persons"), and define a new class "vulnerable dynamic objects" to include "strollers" and "wheelchairs". In a product-oriented vision system, we would like to keep expanding fashion vocabulary as clothing and styles are dynamically changing over time. Given these, how should we train our model with continually-updated ontologies? Should we practice continual learning and lifelong learning to address this open-world scenario?
+	  </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+    <hr>
+    <!-- Speakers-->
+    <p><a class="anchor" id="speakers"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Speakers</h2>
+    <br>
+          <div class="instructor">
+            <a href="https://www.vast.uccs.edu/~tboult" target="_blank">
+              <div class="instructorphoto"><img src="https://connections.cu.edu/sites/default/files/boult_01.jpg"></div>
+              <div>Terrance Boult</div>
+            </a>
+            <div class="instructor-institute">University of Colorado Colorado Springs</div>
+          </div>
+
+          <div class="instructor">
+            <a href="http://web.engr.oregonstate.edu/~tgd/" target="_blank">
+              <div class="instructorphoto"><img src="./open-world-vision_files/thomasD.jfif"></div>
+              <div>Thomas G. Dietterich</div>
+            </a>
+            <div class="instructor-institute">Oregon State University</div><br>
+          </div>
+
+
+          <div class="instructor">
+            <a href="https://people.eecs.berkeley.edu/~efros/" target="_blank">
+              <div class="instructorphoto"><img src="./open-world-vision_files/Efros.jpg"></div>
+              <div>Alexei (Alyosha) Efros</div>
+            </a>
+            <div class="instructor-institute">University of California, Berkeley</div>
+          </div>
+
+
+          <div class="instructor">
+            <a href="https://homes.cs.washington.edu/~ali/" target="_blank">
+              <div class="instructorphoto"><img src="./open-world-vision_files/ali.jpg"></div>
+              <div>Ali Farhadi</div>
+            </a>
+            <div class="instructor-institute">University of Washington</div><br>
+          </div>
+
+          <div class="instructor">
+            <a href="http://dhoiem.cs.illinois.edu/" target="_blank">
+              <div class="instructorphoto"><img src="./open-world-vision_files/derek.jpg"></div>
+              <div>Derek Hoiem</div>
+            </a>
+            <div class="instructor-institute">University of Illinois at Urbana-Champaign</div>
+          </div>
+          <div class="instructor">
+            <a href="http://www.cs.cmu.edu/~shuk/" target="_blank">
+              <div class="instructorphoto"><img src="./open-world-vision_files/shu.jpg"></div>
+              <div>Shu Kong</div>
+            </a>
+	    <div class="instructor-institute">Carnegie Mellon University</div><br>
+          </div>
+
+          <div class="instructor">
+            <a href="https://www.bu.edu/cs/profiles/saenko/" target="_blank">
+              <div class="instructorphoto"><img src="./open-world-vision_files/kate.jpg"></div>
+              <div>Kate Saenko</div>
+            </a>
+            <div class="instructor-institute">Boston University and MIT-IBM Watson AI Lab</div>
+	  </div>
+	  <div class="instructor">
+            <a href="http://www.cs.umd.edu/~abhinav/" target="_blank">
+              <div class="instructorphoto"><img src="http://www.cs.umd.edu/~abhinav/images/profileImage_compressed.jpg"></div>
+              <div>Abhinav Shrivastava</div>
+            </a>
+            <div class="instructor-institute">University of Maryland</div><br>
+          </div>
+
+
+          <div class="instructor">
+            <a href="https://research.google/people/RahulSukthankar/" target="_blank">
+              <div class="instructorphoto"><img src="./open-world-vision_files/Rahul_Sukthankar.png"></div>
+              <div>Rahul Sukthankar</div>
+            </a>
+	    <div class="instructor-institute">Google</div><br><br>
+          </div>
+
+          <div class="instructor">
+            <a href="https://yxw.web.illinois.edu/" target="_blank">
+              <div class="instructorphoto"><img src="./open-world-vision_files/yuxiong.png"></div>
+              <div>Yu-Xiong Wang</div>
+            </a>
+            <div class="instructor-institute">University of Illinois at Urbana-Champaign</div><br>
+          </div>
+
+          <div class="instructor">
+            <a href="http://www1.icsi.berkeley.edu/~stellayu/" target="_blank">
+              <div class="instructorphoto"><img src="./open-world-vision_files/stella.jpg"></div>
+              <div>Stella Yu</div>
+            </a>
+            <div class="instructor-institute">University of California, Berkeley</div><br>
+          </div>
+
+          <!-- able to present but prefer giving opportunities to others -->
+          <!-- div class="instructor">
+            <a href="http://andrewowens.com/" target="_blank">
+              <div class="instructorphoto"><img src="./open-world-vision_files/andrewowens.jpg"></div>
+              <div>Andrew Owens</div>
+            </a>
+            <div class="instructor-institute">UMich</div>
+          </div>
+          <div class="instructor">
+            <a href="http://www.cs.cmu.edu/~deva/" target="_blank">
+              <div class="instructorphoto"><img src="./open-world-vision_files/deva.jpg"></div>
+              <div>Deva Ramanan</div>
+            </a>
+            <div class="instructor-institute">CMU</div>
+          </div>
+          <div class="instructor">
+            <a href="http://www.cs.umd.edu/~abhinav/" target="_blank">
+              <div class="instructorphoto"><img src="http://www.cs.umd.edu/~abhinav/images/profileImage_compressed.jpg"></div>
+              <div>Abhinav Shrivastava</div>
+            </a>
+            <div class="instructor-institute">UMD</div>
+          </div-->
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Organizers -->
+    <br><hr>
+    <p><a class="anchor" id="organizers"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Organizers</h2>
+    <p class="important">Please contact Shu Kong with any questions: aimerykong [at] gmail [dot] com </p>
+    <br>
+        <div>
+          <div class="instructor">
+            <a href="http://www.cs.cmu.edu/~shuk/" target="_blank">
+              <div class="instructorphoto"><img src="./open-world-vision_files/shu.jpg"></div>
+              <div>Shu Kong</div>
+            </a>
+	    <div class="instructor-institute">Carnegie Mellon University</div><br>
+          </div>
+          <div class="instructor">
+            <a href="http://www.cs.cmu.edu/~deva/" target="_blank">
+              <div class="instructorphoto"><img src="./open-world-vision_files/deva.jpg"></div>
+              <div>Deva Ramanan</div>
+            </a>
+            <div class="instructor-institute">Carnegie Mellon University</div><br>
+          </div>
+          <div class="instructor">
+            <a href="https://www.vast.uccs.edu/~tboult/" target="_blank">
+              <div class="instructorphoto"><img src="https://connections.cu.edu/sites/default/files/boult_01.jpg"></div>
+              <div>Terrance Boult</div>
+            </a>
+            <div class="instructor-institute">University of Colorado Colorado Springs</div>
+          </div>
+          <div class="instructor">
+            <a href="http://andrewowens.com/" target="_blank">
+              <div class="instructorphoto"><img src="./open-world-vision_files/andrewowens.jpg"></div>
+              <div>Andrew Owens</div>
+            </a>
+            <div class="instructor-institute">University of Michigan</div><br>
+          </div>
+          <br>
+          <div class="instructor">
+            <a href="http://www.cs.columbia.edu/~vondrick/" target="_blank">
+              <div class="instructorphoto"><img src="http://www.cs.columbia.edu/~vondrick/photo-me.jpg"></div>
+              <div>Carl Vondrick</div>
+            </a>
+            <div class="instructor-institute">Columbia University</div><br>
+          </div>
+          <div class="instructor">
+            <a href="https://yxw.web.illinois.edu/" target="_blank">
+              <div class="instructorphoto"><img src="./open-world-vision_files/yuxiong.png"></div>
+              <div>Yu-Xiong Wang</div>
+            </a>
+            <div class="instructor-institute">University of Illinois at Urbana-Champaign</div>
+          </div>
+          <div class="instructor">
+            <a href="http://www.cs.umd.edu/~abhinav/" target="_blank">
+              <div class="instructorphoto"><img src="http://www.cs.umd.edu/~abhinav/images/profileImage_compressed.jpg"></div>
+              <div>Abhinav Shrivastava</div>
+            </a>
+	    <div class="instructor-institute">University of Maryland</div><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+
+
+    <br><hr>
+    <!-- Important Dates -->
+    <p><a class="anchor" id="dates"></a></p>
+    <div class="row" style="margin-top:30px;">
+      <div class="col-xs-12 col-sm-12">
+        <h2>Important Dates and Details</h2>
+        <ul>
+          <li><b>Signup to receive updates</b>: using <a href="https://forms.gle/ni648J5iKPFva6vYA">this form</a></li>
+          <!-- <li><b>Apply to be part of Program Committee by</b>: Feb 15, 2021</li> -->
+	  <li><b>date to release challenge train-val set (43GB)</b>: <del>March 25, 2021.</del> 
+	 <ul>
+		 <li>Please refer to the 
+			 <a href='https://docs.google.com/document/d/19kfy77P6ahWRmDKq27hz_MxfJOTEe-d3cQkODGn8bVE/edit?usp=sharing' 
+				 target='_blank'>user guide</a> for detailed description of the data.
+	 <li>To get data, 
+		 please accept the Term of Access through filling in this 
+		 <a href='https://forms.gle/kdPUC3LorXzcWhZA7'  target="_blank">google form</a></li>
+		
+	 </ul>
+
+	 <li><b>date to release challenge test set (3.8GB) and <a href="https://eval.ai/web/challenges/challenge-page/1041/overview">EvalAI</a></b>: May 17, 2021. (<font color="red">sorry for the delay!</font>)</li>
+          <li><b>Challenge submission deadline</b>: May 31, 2021 at 11:59pm PST. </li>
+          <!--li><b>Notification</b>:  9, 2021</li-->
+          <!-- <li><b>Camera ready due</b>: April 23, 2021</li> -->
+          <li><b>Workshop date</b>: June 20, 2021</li>
+	  <li><b><font color='red'>YouTube livestream url: </font><a href='https://youtu.be/TknWpbXEKeA'>https://youtu.be/TknWpbXEKeA</a></b></li>
+        </ul>
+        <p>Oral presentation will be selected from challenge participants, e.g., winners and those having innovative ideas.</p>
+      </div>
+    </div>
+
+
+
+
+    <hr>
+    <!-- Competition -->
+    <p><a class="anchor" id="competition"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Competition</h2>
+        <!--p class="important"-->
+	We provide a teaser challenge and will announce challenge results at this workshop.
+	Please refer to <a href="https://docs.google.com/document/d/19kfy77P6ahWRmDKq27hz_MxfJOTEe-d3cQkODGn8bVE/edit?usp=sharing" target="_blank">
+		user guide</a> for more details.
+
+        </p>
+        </p>
+        <ul>
+          <li>
+            <b>Open-set image classification</b> 
+	    requires a model to distinguish novel, anomalous and semantically unknown (e.g., open-set) test-time examples.
+          </li>
+          <!--li>
+            <b>Open-set semantic segmentation</b>.
+	    To address open-world problems, we usually repurpose some small-scale datasets (e.g., MNIST and CIFAR) through image classification.
+	    Open-set semantic segmentation is well poised to translate this into a real-world large-scale problem.
+          </li>
+          <li>
+            <b>Open-world object detection: differentiating unfamiliar objects</b>.
+	    Modern detectors like Mask-RCNN achieve impressive excellent detection  performance in open images. 
+	    Although they generalize well, they produce unreasonably high confidence scores on unfamiliar examples, like crashed cars (as opposed to normally driving cars). 
+	    We would like a model to output more meaningful score that can measure how (un)familiar the model is with the testing example, i.e., how the model is confident/uncertain about its prediction.
+          </li-->
+        </ul>
+        <p>Results will be submitted and evaluated through <a href="https://eval.ai/web/challenges/challenge-page/1041/">EvalAI</a>.
+        <!--p>
+          The submission deadline is <b>April 16, 2021 at 11:59 pm PST</b>.
+          Author notification will be sent out on April 10th, 2021. Camera ready due is April 18th, 2021.
+        </p-->
+      </div>
+    </div>
+
+
+
+    <hr>
+
+    <!-- Schedule -->
+    <p><a class="anchor" id="schedule"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Program Schedule</h2>
+      </div>
+    </div>
+<b><font color='red'>YouTube livestream url: </font><a href='https://youtu.be/TknWpbXEKeA'>https://youtu.be/TknWpbXEKeA</a></b>
+    <div class="row slot-dark">
+      <div class="col-xs-12 col-sm-2">
+        Time (Pacific Time, UTC-7)
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Event
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        Title/Presenter
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Links
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        09:30 - 09:45
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Opening remarks
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <a href="http://www.cs.cmu.edu/~shuk/" target="_blank"><strong>Shu Kong</strong></a>,
+	<span style="color:#999999;">CMU</span><br>
+		<strong>Open World Vision</strong>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://youtu.be/TknWpbXEKeA?t=3355" target="_blank">video</a>]
+      </div>
+    </div>
+
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        09:45 - 10:15
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Invited talk #1
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="https://www.vast.uccs.edu/~tboult" target="_blank"><strong>Terry Boult</strong></a>,
+	      <span style="color:#999999;">UCCS</span><br>
+		<strong>Quo Vadis Open World Learning?</strong>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://youtu.be/TknWpbXEKeA?t=4140" target="_blank">video</a>]
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        10:15 - 10:45
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Invited talk #2
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="http://web.engr.oregonstate.edu/~tgd/" target="_blank"><strong>Thomas G. Dietterich</strong></a>,
+	      <span style="color:#999999;">OSU</span><br>
+		<strong> A Representation Analysis of Image Anomaly Detection</strong>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://youtu.be/TknWpbXEKeA?t=6346" target="_blank">video</a>]
+        [<a href="https://drive.google.com/file/d/1JO-MfjcYJwYMqsl5d8rzzdv7GY8sjcNv/view?usp=sharing" target="_blank">slides</a>]
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        10:45 - 11:15
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Invited talk #3
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="https://people.eecs.berkeley.edu/~efros/" target="_blank"><strong>Alexei (Alyosha) Efros</strong></a>,
+	      <span style="color:#999999;">UCB</span><br>
+		<strong>Open World Must Self-Supervise</strong>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://youtu.be/TknWpbXEKeA?t=7916" target="_blank">video</a>]
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        11:15 - 11:45
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Invited talk #4
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="https://homes.cs.washington.edu/~ali/" target="_blank"><strong>Ali Farhadi</strong></a>,
+	      <span style="color:#999999;">UW</span><br>
+		<strong>Overfitting to Conventions?</strong>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://youtu.be/TknWpbXEKeA?t=10113" target="_blank">video</a>]
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        11:45 - 12:15
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        <strong>Lunch break</strong>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      <img src="./open-world-vision_files/lunch-break.webp" width="80">
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        12:15 - 12:45
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Invited talk #5
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="http://dhoiem.cs.illinois.edu/" target="_blank"><strong>Derek Hoiem</strong></a>,
+	      <span style="color:#999999;">UIUC</span><br>
+		<strong>Three Big Challenges for General Purpose Vision</strong>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://youtu.be/TknWpbXEKeA?t=13260" target="_blank">video</a>]
+      </div>
+    </div>
+
+
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+          12:45 - 13:15
+      </div>
+      <div class="col-xs-12 col-sm-2">
+          Invited talk #6
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="https://www.bu.edu/cs/profiles/saenko/" target="_blank"><strong>Kate Saenko</strong></a>,
+	      <span style="color:#999999;">Boston University and MIT-IBM Watson AI Lab</span><br>
+		<strong>Open-World Recognition with Distributional Shift</strong>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://youtu.be/TknWpbXEKeA?t=15249" target="_blank">video</a>]
+      </div>
+    </div>
+
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+          13:15 - 13:45
+      </div>
+      <div class="col-xs-12 col-sm-2">
+          Invited talk #7
+      </div>
+      <div class="col-xs-12 col-sm-6">
+              <a href="http://www1.icsi.berkeley.edu/~stellayu/" target="_blank"><strong>Stella Yu</strong></a>,
+              <span style="color:#999999;">UCB</span><br>
+                <strong>Bias, Variance, and Correlation For Open Long-Tailed Recognition</strong>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://youtu.be/TknWpbXEKeA?t=16962" target="_blank">video</a>]
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        13:45 - 14:15
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Live panel discussion
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      Panelists: Stella Yu, Terry Boult, Tom Dietterich, Carl Vondrick, Abhinav Shrivastava, Yu-Xiong Wang, Shu Kong
+	      <br>
+	      <!--If you have questions and opinions to discuss, please leave them in this <a href="https://docs.google.com/document/d/1Q_75R5m6rGtd6Mm85wzIfbp4c36FMywZficrks2TVdc/edit?usp=sharing">google doc</a-->
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      <a href="https://youtu.be/TknWpbXEKeA?t=18924" target="_blank">
+      <img src="./open-world-vision_files/paneldis.jpg" width="200">
+      </a>  
+      [<a href="https://youtu.be/TknWpbXEKeA?t=18924" target="_blank">video</a>]
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        14:15 - 14:45
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        <strong>Afternoon break</strong>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      <img src="./open-world-vision_files/np_coffee.png" width="60">
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        14:45 - 15:15
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Invited talk #8
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="https://yxw.web.illinois.edu/" target="_blank"><strong>Yu-Xiong Wang</strong></a>,
+	      <span style="color:#999999;">UIUC</span><br>
+		<strong>Learning to Learn More with Less</strong>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://youtu.be/TknWpbXEKeA?t=22233" target="_blank">video</a>]
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        15:15 - 15:45
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Invited talk #9
+      </div>
+      <div class="col-xs-12 col-sm-6">
+      <a href="http://www.cs.umd.edu/~abhinav/" target="_blank"><strong>Abhinav Shrivastava</strong></a>,
+              <span style="color:#999999;">UMD</span><br>
+                <strong>Reviving Object Discovery: Where from & Where to?</strong>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://youtu.be/TknWpbXEKeA?t=24407" target="_blank">video</a>]
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        15:45 - 16:15
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Invited talk #10
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="./open-world-vision.html" target="_blank"><strong>Challenge Participant: Yingwei Pan</strong></a>,
+	      <span style="color:#999999;">JD AI Research</span><br>
+		<strong>Team VARMS</strong>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://youtu.be/TknWpbXEKeA?t=26450" target="_blank">video</a>]
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        16:15 - 16:45
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Invited talk #11
+      </div>
+      <div class="col-xs-12 col-sm-6">
+	      <a href="https://github.com/LeeDoYup" target="_blank"><strong>Challenge Participant: Doyup Lee</strong></a>,
+	      <span style="color:#999999;">POSTECH & Kakao Brain</span><br>
+		<strong>Team Contrastive</strong>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://youtu.be/TknWpbXEKeA?t=27721" target="_blank">video</a>]
+      </div>
+    </div>
+
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        16:45 - 17:15
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Invited talk #11
+      </div>
+      <div class="col-xs-12 col-sm-6">
+              <a href="./open-world-vision.html" target="_blank"><strong>Challenge Participant: Decheng Gao</strong></a>,
+              <span style="color:#999999;">Hikvision Research Institute</span><br>
+                <strong>Team HRI_HOW</strong>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://youtu.be/TknWpbXEKeA?t=29668" target="_blank">video</a>]
+      </div>
+    </div>
+
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        17:15 - 17:30
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Closing remarks
+      </div>
+      <div class="col-xs-12 col-sm-6">
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<p>
+<br>
+<br>
+<div>
+<footer id="footer">
+<!-- <p class="copyright">&copy; Shu Kong -- Logo photo is created by Shu Kong. -->
+<p class = "copyright"><font size = "-1"> Website design adapted from <a href = "http://ai.stanford.edu/~jingweij/cicv/">Compositionality in Computer Vision</a>.
+Logo photo is created by Shu Kong by composing two Flickr images.
+</font> </p>
+</footer>
+</div>
+
+
+
+
+</body></html> 
